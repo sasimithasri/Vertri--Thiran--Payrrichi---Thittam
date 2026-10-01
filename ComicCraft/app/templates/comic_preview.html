@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ComicCraft - Comic Preview</title>
+</head>
+<body>
+
+    <h1>Comic Preview</h1>
+
+    {% for panel in layout %}
+        <div>
+            <h2>Panel {{ panel.panel }}</h2>
+
+            <img src="{{ panel.image }}" width="500">
+
+            <p>{{ panel.text }}</p>
+        </div>
+    {% endfor %}
+
+    <br>
+
+    <a href="/export-success">Export Successful</a>
+
+</body>
+</html>

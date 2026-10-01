@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Comic Result</title></head>
+<body style="font-family:sans-serif;text-align:center;background:#fff8e7">
+<h1>🎉 Comic Ready!</h1>
+<h2>Story: {{ story }}</h2>
+{% for p in panels %}
+<div style="border:3px solid black;margin:20px auto;padding:15px;max-width:600px;background:white">
+<h3>{{ p.title }}</h3>
+<img src="{{ p.image }}" style="width:100%;border:2px solid black">
+<p>{{ p.text }}</p>
+</div>
+{% endfor %}
+<br>
+<a href="/" style="background:black;color:white;padding:10px 20px;text-decoration:none">⬅ Back to Home</a>
+</body>
+</html>
